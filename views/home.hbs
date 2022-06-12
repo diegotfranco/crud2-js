@@ -1,0 +1,34 @@
+<table class="table table-hover">
+	<thead class="text-bg-primary">
+		<tr>
+			<th class="text-center align-middle" scope="col">Código</th>
+			<th class="text-center align-middle" scope="col">Data</th>
+			<th class="text-center align-middle" scope="col">Categoria</th>
+			<th class="text-center align-middle" scope="col">Situação</th>
+			<th class="text-center align-middle" scope="col">Andar</th>
+			<th class="text-center align-middle" scope="col">Sala</th>
+			<th class="text-center align-middle" scope="col">Unidade</th>
+			<th class="text-center align-middle" scope="col">Solicitante</th>
+			<th class="text-center align-middle" scope="col">Ações</th>
+		</tr>
+	</thead>
+	<tbody>
+		{{#each rows}}
+		<tr>
+			<td class="text-center align-middle">{{this.codigo}}</td>
+			<td class="text-center align-middle">{{this.data}}</td>
+			<td class="text-center align-middle">{{this.categoria}}</td>
+			<td class="text-center align-middle">{{this.situacao}}</td>
+			<td class="text-center align-middle">{{this.andar}}</td>
+			<td class="text-center align-middle">{{this.sala}}</td>
+			<td class="text-center align-middle">{{this.unidade}}</td>
+			<td class="text-center align-middle">{{this.solicitante}}</td>
+			<td class="text-center align-middle">
+				<a href="#" type="button" class="btn btn-outline-secondary btn-small"><i class="bi bi-eye"></i></a>
+				<a href="#" type="button" class="btn btn-outline-warning btn-small"><i class="bi bi-pencil"></i></a>
+				<a href="#" type="button" class="btn btn-outline-danger btn-small"><i class="bi bi-x"></i></a>
+			</td>
+		</tr>
+		{{/each}}
+	</tbody>
+</table>

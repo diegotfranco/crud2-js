@@ -1,0 +1,46 @@
+<div class="col-md-7">
+		<label for="email" class="form-label">E-mail</label>
+		<input type="email" class="form-control" name="email" id="email" value="{{this.email}}" placeholder="E-mail institucional">
+	</div>
+	
+	<div class="col-md-5">
+		<label for="unidade" class="form-label">Unidade</label>
+		<select id="unidade" name="unidade" class="form-select" value="{{this.unidade}}" onchange="procuraAndar(event)">
+			<option value="" disabled selected hidden>Selecione...</option>
+			{{#each unidades}}
+				<option value="{{this.unidade}}">{{this.unidade}}</option>
+			{{/each}}
+		</select>
+	</div>
+	<div class="col-md-2">
+		<label for="andar" class="form-label">Andar</label>
+		<select id="andar" name="andar" class="form-select" value="{{this.andar}}" onchange="procuraAndar(event)" disabled>
+			<option value="" disabled selected hidden>Selecione...</option>
+		</select>
+	</div>
+	<div class="col-md-3">
+		<label for="sala" class="form-label">Sala</label>
+		<select id="sala" name="sala" class="form-select" value="{{this.sala}}" disabled>
+			<option value="" disabled selected hidden>Selecione...</option>
+		</select>
+	</div>
+	<div class="col-md-3">
+		<label for="categoria" class="form-label">Categoria</label>
+		<select id="categoria" name="categoria" class="form-select" value="{{this.categoria}}">
+			<option value="" disabled selected hidden>Selecione...</option>
+			{{#each categorias}}
+				<option value="{{this.nome}}">{{this.nome}}</option>
+			{{/each}}
+		</select>
+	</div>
+	<div class="col-md-4">
+		<label class="form-label" for="img">Imagem de Auxílio</label>
+		<input type="file" class="form-control" id="img" name="img" value="{{this.imagem}}" placeholder="Nenhum arquivo selecionado">
+	</div>
+	<div class="col-12">
+		<label for="descricao" class="form-label">Descrição</label>
+		<textarea class="form-control" placeholder="Deixe aqui seu relato sobre o problema" id="descricao" name="descricao">{{this.descricao}}</textarea>
+	</div>
+	<div class="col-12 d-flex justify-content-end">
+		<button type="submit" class="btn btn-primary">Enviar</button>
+	</div>

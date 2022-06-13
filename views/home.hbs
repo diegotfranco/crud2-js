@@ -1,3 +1,15 @@
+<div class="row mb-2">
+	<div class="col-6">
+		<h2 class="mb-4">
+			Ocorrências
+		</h2>
+	</div>
+	<div class="col-6 d-flex justify-content-end align-items-end">
+		<a href="/add-new" type="button" class="btn btn-outline-success"><i class="bi bi-plus-lg"></i></a>
+	</div>	
+</div>
+
+
 <table class="table table-hover">
 	<thead class="text-bg-primary">
 		<tr>
@@ -24,9 +36,9 @@
 			<td class="text-center align-middle">{{this.unidade}}</td>
 			<td class="text-center align-middle">{{this.solicitante}}</td>
 			<td class="text-center align-middle">
-				<a href="#" type="button" class="btn btn-outline-secondary btn-small"><i class="bi bi-eye"></i></a>
-				<a href="#" type="button" class="btn btn-outline-warning btn-small"><i class="bi bi-pencil"></i></a>
-				<a href="#" type="button" class="btn btn-outline-danger btn-small"><i class="bi bi-x"></i></a>
+				<a href="/more/{{this.codigo}}" type="button" class="btn btn-outline-secondary btn-small"><i class="bi bi-eye"></i></a>
+				<a href="/edit/{{this.codigo}}" type="button" class="btn btn-outline-warning btn-small"><i class="bi bi-pencil"></i></a>
+				<a href="/delete{{this.codigo}}" type="button" class="btn btn-outline-danger btn-small"><i class="bi bi-x"></i></a>
 			</td>
 		</tr>
 		{{/each}}

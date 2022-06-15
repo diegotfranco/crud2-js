@@ -1,16 +1,15 @@
 const express = require('express');
 const exphbs = require('express-handlebars');
-const bodyParser = require('body-parser');
 require('dotenv').config();
 
 const app = express();
 const port = process.env.PORT;
 
 //config parsing middleware
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(express.urlencoded({extended: false}));
 
 // tipo de parse json
-app.use(bodyParser.json());
+app.use(express.json());
 
 //arq estaticos
 app.use(express.static('public'));
